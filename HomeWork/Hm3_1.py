@@ -5,21 +5,27 @@
 import random
 
 dlina = int(input("Введите размер списка:"))
-slovar = {}
 
 spisok = (random.randint(1, 100) for _ in range(dlina))
+print(spisok)
+
+slovar = {}
 for item in spisok:
-    slovar[item] = slovar.get(item,0) + 1
+    slovar[item] = slovar.get(item, 0) + 1
+print(slovar)
 chislo = int(input("Введите число, которое ищите:"))
 search_fir = chislo
 search_sec = chislo
-if chislo == spisok(chislo,):
-    print(spisok(chislo))
+if slovar.get(chislo) is not None:
+
+    print('{} встречается:{} раз'.format(chislo, slovar[chislo]))
 else:
-    while (spisok(chislo,) != search_fir) or (spisok(chislo,) != search_sec):
+    while (slovar.get(search_fir) != None) and (slovar.get(search_sec) != None):
         search_fir += 1
         search_sec -= 1
-    if spisok.get(search_fir) != None:
-        print(spisok(search_fir))
-    else:
-        print(spisok(search_sec))
+    if slovar.get(search_fir) != None:
+
+        print('{} встречается:{} раз'.format(search_fir, slovar[search_fir]))
+    elif slovar.get(search_sec) != None:
+
+        print('{} встречается:{} раз'.format(search_sec, slovar[search_sec]))
