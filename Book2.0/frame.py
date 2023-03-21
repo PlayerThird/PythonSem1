@@ -1,5 +1,5 @@
 from tkinter import *
-from tkinter import ttk
+from tkinter import ttk # кнопки
 import button
 import text_fields
 
@@ -18,8 +18,19 @@ if __name__ == '__main__':
     label = Label(text=main_menu)
     label.pack()
 
-    but = ttk.Button(text="Start", command= button.main_button())
+    # clicks = 0
+    # def click_button():
+    #     global clicks
+    #     clicks += 1
+    #     # изменяем текст на кнопке
+    #     btn["text"] = f"Clicks {clicks}"
+    #
+    #
+    # btn = ttk.Button(text="Click Me", command=click_button)
+    # btn.pack()
+    but = ttk.Button(text="Start",command= button.main_button)
     but.pack()
+
     #              заменить на функцию закрития по кнопке в меню
     root.protocol("WM_DELETE_WINDOW", finish)#Закрытие приложение с сообщением
 
