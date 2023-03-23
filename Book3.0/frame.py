@@ -22,6 +22,6 @@ if __name__ == '__main__':
 
 
     #              заменить на функцию закрития по кнопке в меню
-    # root.protocol("WM_DELETE_WINDOW", finish)#Закрытие приложение с сообщением
+    root.protocol("WM_DELETE_WINDOW", finish)#Закрытие приложение с сообщением
 
     root.mainloop()
