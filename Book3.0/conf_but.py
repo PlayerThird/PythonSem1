@@ -1,5 +1,6 @@
 import delete
 import frame
+
 import phone_book
 import saver
 import search
@@ -10,7 +11,7 @@ from tkinter.messagebox import showinfo
 pb = phone_book.PhoneBook("phone.txt")
 
 # def clear():
-
+#     frame.new_frame()
 
 
 def case1():#1.Показать контакт
@@ -39,5 +40,5 @@ def case5():# 5.Удалить контакт
 def case6():#6.Сохранить контакт
     pb.save()
 
-def case7():#7.Выход
-    pass
+# def case7():#7.Выход
+#     root.destroy()
