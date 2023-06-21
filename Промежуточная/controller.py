@@ -23,7 +23,12 @@ def start():
                     index = view.input_index("Введите индекс заметки, которую хотите изменить")
                     oldnote = view.returnnote(pb,index)
                     note = view.change_contact(pb,index)
-                    model.change_contact(oldnote,note)
+                    model.change_note(oldnote, note)
                     view.show_message(f"Заметка успешно изменёна")
             case 6:
+                if view.show_note(pb, 'Заметок нет'):
+                    index = view.input_index("Введите индекс заметки, которую хотите удалить")
+                    oldnote = view.returnnote(pb, index)
+                    model.del_note(oldnote)
+            case 7:
                 return

@@ -29,7 +29,7 @@ def show_note(note_book: list[dict], error_message: str):
 
 
 def add_note() -> dict:
-    index = int(input("Введите индекс"))
+    index = input("Введите индекс")
     head = input("Введите заголовок")
     body = input("Введите заметку")
     data = str(date.today())
@@ -46,7 +46,7 @@ def change_contact(notebook: list[dict], index: int):
     return {'index': note.get('index') if note.get('index') else notebook[note.get(index)].get('index'),
             'head': note.get('head') if note.get('head') else notebook[note.get(index)].get('head'),
             'body': note.get('body') if note.get('body') else notebook[note.get(index)].get('body'),
-            'date': note.get('date') if note.get('date') else notebook[note.get(index)].get('date')}
+            'date': str(date.today()) }
 
 
 def show_message(message: str):

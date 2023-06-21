@@ -27,9 +27,17 @@ def get_note_book():
 def add_note(note: dict):
     note_book.append(note)
 
-def change_contact(oldnote: dict,note: dict):
+def change_note(oldnote: dict, note: dict):
     for i,notus in enumerate(note_book):
         if notus == oldnote:
             note_book.pop(i)
             break
     note_book.append(note)
+
+def del_note(oldnote: dict):
+    for i,notus in enumerate(note_book):
+        if notus == oldnote:
+            note_book.pop(i)
+            break
+        else:
+            print("Такой заметки нет :/")
